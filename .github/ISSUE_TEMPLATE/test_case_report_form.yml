@@ -1,0 +1,97 @@
+name: Test case report
+description: Create a test case report
+title: "[Test Case] "
+labels: ["test-case-report"]
+projects: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Test Case Report
+        Please fill out the following form to report a test case.
+
+  # description
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the test case you want to report.
+      placeholder: Tell us what you want to see!
+    validations:
+      required: true
+
+  # depended on
+  - type: textarea 
+    id: depended-on
+    attributes:
+      label: Depended on another test case
+      description: Please provide link (starting with \#) to another test reporot.
+      value: "#"
+    validations:
+      required: false
+
+  # actual result
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual Result
+      description: Please describe the actual result of the test case.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  # expected result
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected Result
+      description: Please describe the expected result of the test case.
+      placeholder: Tell us what should you see!
+    validations:
+      required: true
+
+  # steps to reproduce
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please describe the steps to reproduce the test case.
+    validations:
+      required: true
+
+  # checkboxes if test passed|failed|not executed
+  - type: checkboxes
+    id: test-status
+    attributes:
+      label: Test Status
+      description: Please select the status of the test case.
+      options:
+        - label: Passed
+          required: false
+        - label: Failed
+          required: false
+        - label: Not executed
+          required: false
+
+  # priority
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - Low
+        - Medium
+        - High
+
+  # note
+  - type: textarea
+    id: note
+    attributes:
+      label: Notes
+      description: Please fill in any relevant data or files. Screenshots, videos, logs, etc.
+      placeholder: Fill in or drag and drop files here or click to upload.
+    validations:
+      required: false
+      
