@@ -61,18 +61,17 @@ body:
       required: true
 
   # checkboxes if test passed|failed|not executed
-  - type: radio
+  - type: dropdown
     id: test-status
     attributes:
       label: Test Status
       description: Please select the status of the test case.
       options:
-        - label: Passed
-          required: false
-        - label: Failed
-          required: false
-        - label: Not executed
-          required: false
+        - Passed
+        - Failed
+        - Not executed
+    validations:
+      required: true
 
   # priority
   - type: dropdown
