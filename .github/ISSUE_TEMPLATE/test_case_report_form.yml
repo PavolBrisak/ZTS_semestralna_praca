@@ -61,7 +61,7 @@ body:
       required: true
 
   # checkboxes if test passed|failed|not executed
-  - type: checkboxes
+  - type: radio
     id: test-status
     attributes:
       label: Test Status
